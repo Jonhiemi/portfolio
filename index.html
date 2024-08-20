@@ -1,20 +1,18 @@
-    <!DOCTYPE html>
-    <html lang="es">
+<html lang="es">
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Mi primera web</title>
-         <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="style.css">
         <script src="https://kit.fontawesome.com/6a31052744.js" crossorigin="anonymous"></script>
-        <link rel="preconnect" href="https://fonts.googleapis.com"> <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
-
+        <link rel="preconnect" href="https://fonts.googleapis.com"> <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet"> 
     </head>
     <body>
         <div class="container">
             <header id="encabezado"> <!---En esta seccion se encuentra el logo y la barra de navegacion--->             
-                <a href="index.html" class="logo">
-                    <i class="fa-solid fa-fish-fins"></i>
-                </a>
+                <div class="logo-container">
+                    <h1 class="logo">JM</h1>
+                </div>
                 <nav>
                     <input type="checkbox" id="check" />
                     <label for="check" class="checkbtn">
@@ -36,16 +34,27 @@
                         <img src="img/foto_perfil_sinfondo.png" alt="imagen personal">
                         <h2 class="titulo1">Sobre mí</h2>
                         <p class="parrafo1">¡Bienvenido a mi página !</p>
-                        <p class="parrafo2"> Me dicen Jonhi, tengo 28 años, nací en Mendoza y vivo en el departamento de San Martín.
-                        Hace más de un año empecé a estudiar mayormente mediante cursos y por otra parte autodidacta, sigo adquiriendo conocimientos. Aunque no poseo un empleo IT actualmente. Sí me gustaría insertarme en el mercado laboral, también estoy dispuesto a contribuir en proyectos para adquirir experiencias</p>                    
+                        <p class="parrafo2"> Me dicen Jonhi, hace más de un año empecé a estudiar mayormente mediante cursos y por otra parte autodidacta, sigo adquiriendo conocimientos. Aunque no poseo un empleo IT actualmente. Sí me gustaría insertarme en el mercado laboral, también estoy dispuesto a contribuir en proyectos para adquirir experiencias</p>                    
                     </div>            
                 </section>
-                <section class="proyectos" id="proyectos"> <!---En esta seccion se encuentran mis proyectos --->
-                    <h2>Proyectos personales o colaborativos</h2>
-                    <div class="tarjeta-1">
-                        <img src="https://jonhiemi.github.io/Ap4-peliculas/" alt="">
-                        <h2>AP4 Películas</h2>
-                        <p>Llamo a la API de DMDB para optener diferente información sobre películas y series con una estructura que contiene un nav y un buscador. Además en la sección salen las imagenes con sus titulos correspondiente que al hacer click se despliega una card el cual contiene informacion de la misma.</p>
+                <section class="proyectos" id="proyectos">
+                    <section class="proyectos" id="proyectos">
+                        <h2>Proyectos personales o colaborativos</h2>
+                        <div class="project-card">
+                            <h3>AP4 Películas</h3>
+                            <img src="img/Ap4.png" alt="Imagen AP4 Películas">
+                            <button class="show-info-btn">Ver más</button>
+                        </div>
+                    </section>
+        
+                    <!-- Tarjeta emergente que aparece al hacer clic en "Ver más" -->
+                    <div class="popup-card" id="popup-card" style="display: none;">
+                        <div class="popup-content">
+                            <h3>Detalles del Proyecto AP4 Películas</h3>
+                            <img src="img/Ap4.png" alt="Imagen AP4 Películas" class="popup-img">
+                            <p>Esta aplicación permite explorar una base de datos de películas y series, proporcionando detalles como sinopsis, actores, y valoraciones. La interfaz incluye un navegador y buscador dinámico.</p>
+                            <button class="close-popup-btn">Cerrar</button>
+                        </div>
                     </div>
                 </section>             
                 <section class="herramientas" id="herramientas"> <!---En esta seccion se encuentra herramientas que se usar--->
@@ -71,5 +80,6 @@
                 <i class="fa-brands fa-instagram"></i>
             </footer>              
         </div>
+        <script src="script.js"></script>
     </body>
     </html>
