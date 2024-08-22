@@ -1,24 +1,12 @@
-document.addEventListener('DOMContentLoaded', function () {
-    // Selecciona el botón de "Ver más" en la tarjeta principal
-    const showInfoButton = document.querySelector('.show-info-btn');
-    const popupCard = document.getElementById('popup-card');
-    const closePopupButton = document.querySelector('.close-popup-btn');
+// Seleccionar todos los enlaces del menú de navegación
+const menuLinks = document.querySelectorAll('nav ul li a');
+const checkBox = document.getElementById('check');
 
-    // Mostrar la tarjeta emergente cuando se hace clic en "Ver más"
-    showInfoButton.addEventListener('click', function () {
-        popupCard.style.display = 'block';
-    });
-
-    // Cerrar la tarjeta emergente cuando se hace clic en "Cerrar"
-    closePopupButton.addEventListener('click', function () {
-        popupCard.style.display = 'none';
-    });
-
-    // Cerrar la tarjeta emergente si el usuario hace clic fuera del contenido de la tarjeta
-    window.addEventListener('click', function (event) {
-        if (event.target === popupCard) {
-            popupCard.style.display = 'none';
-        }
+// Añadir evento a cada enlace
+menuLinks.forEach(link => {
+    link.addEventListener('click', () => {
+        // Desmarcar el checkbox cuando se hace clic en un enlace
+        checkBox.checked = false;
     });
 });
 
