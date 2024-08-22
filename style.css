@@ -37,7 +37,6 @@ header a {
     justify-content: center;
     align-items: center;
 }
-
 .logo {
     font-size: 4em;
     font-family: "Roboto", sans-serif;
@@ -46,7 +45,6 @@ header a {
     transition: transform 0.3s ease, color 0.3s ease;
     cursor: pointer;
 }
-
 /* Animación de vibración suave */
 @keyframes shake {
     0% { transform: translate(1px, 1px) rotate(0deg); }
@@ -61,20 +59,17 @@ header a {
     90% { transform: translate(1px, 2px) rotate(0deg); }
     100% { transform: translate(1px, -2px) rotate(-1deg); }
 }
-
 /* Efecto cuando se pasa el mouse sobre el logo */
 .logo:hover {
     transform: scale(1.2) rotate(360deg); /* Expansión y giro */
     color: #FFD700; /* Cambio de color a amarillo */
 }
-
 /* Ajuste responsive del logo */
 @media (max-width: 768px) {
     .logo {
         font-size: 2.5em; /* Reducir el tamaño del logo en pantallas pequeñas */
     }
 }
-
 #check {
     display: none;
 }
@@ -98,7 +93,6 @@ header a {
     margin: 150px auto;
     width: 60%;
 }
-
 .titulo1, .parrafo1, .parrafo2 {
     font-size: 1.1em;
     margin: 2rem;
@@ -116,7 +110,6 @@ header a {
 main, footer, main.acerca-de {
     padding: 5px;
 } 
-
 main {
     font-size: 1.3em;
     background-repeat: no-repeat;
@@ -129,7 +122,6 @@ main {
     text-align: center;
     padding: 20px;
 }
-
 .project-card {
     border: 1px solid #ccc;
     padding: 20px;
@@ -139,15 +131,13 @@ main {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     border-radius: 10px;
 }
-
 .project-card img {
     max-width: 100%;
     height: auto;
     border-radius: 5px;
     margin-bottom: 10px;
 }
-
-.show-info-btn, .hide-info-btn {
+.show-info-btn {
     margin-top: 15px;
     padding: 10px 20px;
     border: none;
@@ -155,9 +145,11 @@ main {
     color: white;
     border-radius: 5px;
     cursor: pointer;
+    text-decoration: none;
+    display: inline-block; /* Asegura que se vea como un botón */
 }
 
-.show-info-btn:hover, .hide-info-btn:hover {
+.show-info-btn:hover {
     background-color: #0056b3;
 }
 
@@ -166,67 +158,6 @@ main {
     border-top: 1px solid #ddd;
     padding-top: 15px;
     display: none; /* Oculto inicialmente */
-}
-/* Tarjeta emergente estilo */
-.popup-card {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 60%;
-    height: auto;
-    background-color: #fff;
-    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.5);
-    border-radius: 15px;
-    z-index: 1000;
-    padding: 20px;
-    display: none;
-}
-
-.popup-content {
-    text-align: center;
-}
-
-.popup-card h3 {
-    color: #333;
-}
-
-.popup-img {
-    max-width: 100%;
-    border-radius: 10px;
-}
-
-.close-popup-btn {
-    margin-top: 15px;
-    padding: 10px 20px;
-    border: none;
-    background-color: #dc3545;
-    color: white;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-.close-popup-btn:hover {
-    background-color: #c82333;
-}
-
-/* Fondo oscuro al activar la tarjeta emergente */
-.popup-card:before {
-    content: '';
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.7);
-    z-index: -1;
-}
-
-
-.info-card img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 5px;
 }
 
 /*Estilos para Herramientas*/
@@ -239,7 +170,6 @@ main {
     text-align: center;
     font-size: 1em;
 }
-
 .iconos-herramientas {
     width: 50%;
     border: 1px solid #45B39D;
@@ -258,15 +188,11 @@ footer {
 footer i {
     padding: 0.4em;
 }
-
 #frase {
-
     font-size: 20px;
 }
 
-
 /*En esta parte es sobre lo responsive*/
-
 @media (max-width: 768px) {
     body {
     font-size: 13px;
@@ -305,14 +231,30 @@ footer i {
     check:checked ~ .checkbnt {
         color: #1B2631;
     }
-    
+    .acerca-de {
+        font-size: 20px;
+        width: 85vw;
+    }
+    .acerca-de img {
+        width: 50vw;
+        height: 40vh;
+    }
     .proyectos {
         display: block;
     }
-    .iconos-herramientas i {
+    .herramientas {
+        margin: 10px;
         display: flex;
-        flex-direction: row;
-        justify-content: space-evenly;
+        justify-content: center;
         align-items: center;
+    }
+    .herramientas h2 {
+        margin: 25px;
+    }
+    #redes {
+        width: 100vw;
+        display: flex;
+        font-size: 25px;
+        margin-top: 30px;
     }
 }
